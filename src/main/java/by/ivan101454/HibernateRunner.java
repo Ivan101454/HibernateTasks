@@ -13,7 +13,10 @@ public class HibernateRunner {
              Session session = sessionFactory.openSession()) {
             session.beginTransaction();
             System.out.println("OK");
-            Visit visit = Visit.builder().customerId(54).visitId(9).build();
+            Visit visit = Visit.builder()
+                    .customerId(54)
+                    .visitId(9)
+                    .build();
             session.save(visit);
             session.getTransaction().commit();
         }
