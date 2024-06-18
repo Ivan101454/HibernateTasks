@@ -16,14 +16,9 @@ java {
 
 dependencies {
     implementation 'org.hibernate.orm:hibernate-core:6.5.2.Final'
-    implementation 'org.postgresql:postgresql:42.7.3'
+    runtimeOnly 'org.postgresql:postgresql:42.7.3'
 
-
-
-//    implementation 'com.vladmihalcea:hibernate-types-52:2.21.1'
-    implementation 'org.slf4j:slf4j-api:2.0.13'
-
-
+//    implementation 'org.slf4j:slf4j-api:2.0.13'
 
     compileOnly 'org.projectlombok:lombok:1.18.32'
     annotationProcessor 'org.projectlombok:lombok:1.18.32'
@@ -40,5 +35,5 @@ test {
 }
 
 wrapper {
-    gradleVersion '8.8'
+    gradleVersion '8.2'
 }
