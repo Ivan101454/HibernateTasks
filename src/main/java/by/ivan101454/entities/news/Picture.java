@@ -21,4 +21,5 @@ public class Picture {
     int pictureId;
     @Column(name = "picture_link")
     String pictureLink;
+
 }

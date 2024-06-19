@@ -4,10 +4,13 @@ import by.ivan101454.entities.Transaction;
 import by.ivan101454.entities.Visit;
 import by.ivan101454.entities.news.Article;
 import by.ivan101454.entities.news.Picture;
+import by.ivan101454.entities.news.Solution;
 import by.ivan101454.entities.news.Text;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
+
+import java.time.LocalDate;
 
 public class HibernateRunner {
     public static void main(String[] args) {
@@ -21,14 +24,15 @@ public class HibernateRunner {
             System.out.println("OK");
             session.beginTransaction();
             Text text = Text.builder()
-                    .textId(2)
+                    .textId(1)
                     .textLink("input.txt")
+                    .solution(Solution.CUSTOM)
                     .build();
 
-            Picture picture = Picture.builder()
-                    .pictureId(2)
-                    .pictureLink("picture.jpeg")
-                    .build();
+//            Picture picture = Picture.builder()
+//                    .pictureId(3)
+//                    .pictureLink("picture.jpeg")
+//                    .build();
 //
 //            Article article = Article.builder()
 //                    .articleId(1)
@@ -36,10 +40,11 @@ public class HibernateRunner {
 //                    .articleText(text)
 //                    .articlePicture(picture)
 //                    .articleAuthor("I am")
+//                    .localDate(LocalDate.now())
 //                    .build();
 //
             session.persist(text);
-            session.persist(picture);
+//            session.persist(picture);
 //            session.persist(article);
 
 //            Visit visit = Visit.builder()

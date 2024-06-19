@@ -9,6 +9,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -27,4 +29,6 @@ public class Article {
     Picture articlePicture;
     @Column(name = "article_author")
     String articleAuthor;
+    @Column(name = "date")
+    LocalDate localDate;
 }

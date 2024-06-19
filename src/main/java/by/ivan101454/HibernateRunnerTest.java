@@ -7,13 +7,16 @@ import jakarta.persistence.Table;
 import org.junit.jupiter.api.Test;
 
 import java.lang.reflect.Field;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.Arrays;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
 class HibernateRunnerTest {
     @Test
-    void checkReflectionApi() {
+    void checkReflectionApi() throws SQLException, IllegalAccessException {
         Text text = Text.builder()
                 .textId(1)
                 .textLink("input.txt")
@@ -42,5 +45,13 @@ class HibernateRunnerTest {
                 .collect(Collectors.joining(", "));
 
         System.out.println(sql.formatted(tableName, columnNames, columnValues));
+
+//        Connection connection = null;
+//        PreparedStatement preparedStatement = connection.prepareStatement(sql.formatted(tableName, columnNames, columnValues));
+//        for (Field declaredField: declaredFields) {
+//            declaredField.setAccessible(true);
+//            preparedStatement.setObject(1, declaredField.get(text));
+//        }
+
     }
 }

@@ -1,9 +1,6 @@
 package by.ivan101454.entities.news;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -21,4 +18,7 @@ public class Text {
     int textId;
     @Column(name = "text_link")
     String textLink;
+    @Column(name = "current_solution")
+    @Enumerated(value = EnumType.STRING)
+    Solution solution;
 }
