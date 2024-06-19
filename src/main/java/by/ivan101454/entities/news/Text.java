@@ -1,5 +1,6 @@
 package by.ivan101454.entities.news;
 
+import by.ivan101454.converter.DurationConverter;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -21,4 +22,8 @@ public class Text {
     @Column(name = "current_solution")
     @Enumerated(value = EnumType.STRING)
     Solution solution;
+    @Column(name = "duration_date")
+    @Convert(converter = DurationConverter.class)
+    private DurationData durationData;
+
 }

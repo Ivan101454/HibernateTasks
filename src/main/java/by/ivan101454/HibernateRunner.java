@@ -2,10 +2,7 @@ package by.ivan101454;
 
 import by.ivan101454.entities.Transaction;
 import by.ivan101454.entities.Visit;
-import by.ivan101454.entities.news.Article;
-import by.ivan101454.entities.news.Picture;
-import by.ivan101454.entities.news.Solution;
-import by.ivan101454.entities.news.Text;
+import by.ivan101454.entities.news.*;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
@@ -27,6 +24,7 @@ public class HibernateRunner {
                     .textId(1)
                     .textLink("input.txt")
                     .solution(Solution.CUSTOM)
+                    .durationData(new DurationData(LocalDate.of(2000, 1, 2)))
                     .build();
 
 //            Picture picture = Picture.builder()
