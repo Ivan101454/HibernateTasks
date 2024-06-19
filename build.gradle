@@ -16,6 +16,8 @@ java {
 
 dependencies {
     implementation 'org.hibernate.orm:hibernate-core:6.5.2.Final'
+    implementation 'org.junit.jupiter:junit-jupiter:5.8.1'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.8.1'
     runtimeOnly 'org.postgresql:postgresql:42.7.3'
 
 //    implementation 'org.slf4j:slf4j-api:2.0.13'

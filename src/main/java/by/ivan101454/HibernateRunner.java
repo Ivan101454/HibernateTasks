@@ -21,12 +21,12 @@ public class HibernateRunner {
             System.out.println("OK");
             session.beginTransaction();
             Text text = Text.builder()
-                    .textId(1)
+                    .textId(2)
                     .textLink("input.txt")
                     .build();
 
             Picture picture = Picture.builder()
-                    .pictureId(1)
+                    .pictureId(2)
                     .pictureLink("picture.jpeg")
                     .build();
 //
